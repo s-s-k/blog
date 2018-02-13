@@ -1,0 +1,12 @@
+.wrapper {
+    min-height: 400px;
+    padding: 40px;
+}
+.button {
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+}
+
+

@@ -1,0 +1,132 @@
+<!doctype html>
+
+<!--
+  This is a simple example / template impress.js slide show. The goal is to be
+  easier to read for a first timer than the official and very feature rich
+  demo by bartaz (http://bartaz.github.io/impress.js/). It's also a very
+  traditional presentation that looks like slides (square screens with bullet
+  points...), again to make a first timer feel more at home. From this simple
+  presentation you can then go on to more powerful impress.js presentations!
+
+  This example is hopefully helpful for people that want to create both
+  simple and (eventually) awesome presentations in impress.js and comfortable
+  doing that directly in HTML.
+
+  By: @henrikingo (Still based on the HTML from bartaz' demo.)
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>web动画性能优化</title>
+    <meta name="description" content="Explore impress.js in 3D" />
+    <meta name="author" content="Henrik Ingo" />
+    <link href="css/3D-rotations.css" rel="stylesheet" />
+    <link href="css/ppt.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="2000">
+
+
+    <div id="overview" class="step overview" data-x="1350" data-y="100" data-z="100" data-scale="3" data-rotate-y="90">
+         <h1>web 移动端动画性能优化</h1>
+    </div>
+    <div id="overview2" class="step overview" data-x="2018" data-y="106" data-z="3018" data-scale="2">
+        <p>1. 动画在浏览器渲染过程</p>
+        <p>2. 动画在浏览器优化原理</p>
+        <p>3. FLIP 技术提升动画效率 </p>
+        <p>4. FLIP 技术简单实现 </p>
+        <p>5. FLIP 技术应用场景，及优缺点</p>
+         <!-- <p>Unlike the <code>x/y/z</code> coordinates (aka translations), the <code>rotate-x/y/z</code> rotations are applied in a
+         specific order, and order matters. This demo presentation exhibits the use of the new <code>data-rotate- order</code> attribute.
+         Instead of the default "xyz" order, the steps use the reversed <em>"zyx"</em> order in applying rotations around each axis.
+         Some of the steps (<a href="#step-3">3</a> &amp; <a href="#step-7">7</a>), are in positions that are not possible with the default "xyz" order.</p> -->
+    </div>
+
+    <div id="step-1" class="step page" data-x="0" data-y="0" data-z="0"
+         data-goto-prev="step-8">
+        <h5>动画在浏览器渲染过程</h5>
+        <img src="/img/timeline.png" class="ppt-page-img" />
+        <p><strong>JavaScript：</strong>JavaScript实现动画效果，DOM元素操作等</p>
+        <p><strong>Style(计算样式)：</strong> 确定每个DOM应该应用什么CSS规则。 </p>
+        <p><strong>Layout(布局)：</strong>计算每个DOM元素在最终屏幕上显示的大小和位置。由于web页面的元素布局是相对的，所以其中任意一个元素的位置发生变化，都会联动的引起其他元素发生变化，这个过程叫reflow。
+            </p>
+        <p><strong>Paint(绘制)：</strong>在多个层上绘制DOM元素的的文字、颜色、图像、边框和阴影等。</p>
+        <p><strong>Composite(渲染层合并)：</strong>按照合理的顺序合并图层然后显示到屏幕上。</p>
+    </div>
+
+    <div id="step-2" class="step page" data-x="-420" data-y="-70" data-z="-250" data-rotate-z="45" data-rotate-y="-45" data-rotate-order="zyx">
+        <h5>三种常见的渲染流程</h5>
+        <img src="/img/comment.png" class="ppt-page-img" />
+    </div>
+
+    <div id="step-3" class="step page page-3" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
+        <h5>动画在浏览器的优化</h5>
+        <img src="/img/timeline.png" class="ppt-page-img" />
+        <p>优化JavaScript的执行效率</p>
+        <span>动画实现，避免使用setTimeout或setInterval，尽量使用
+            <a href="https://caniuse.com/#search=requestAnimationFrame">requestAnimationFrame</a>
+        </span>
+        <span>把耗时长的JavaScript代码放到<a href="https://caniuse.com/#search=Workers">Web Workers</a>中去做防止js阻塞</span>
+    </div>
+
+    <div id="step-4" class="step page" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx">
+        <h5>动画在浏览器的优化</h5>
+        <img src="/img/timeline.png" class="ppt-page-img" />
+        <p>降低样式计算的范围和复杂度</p>
+        <span>降低样式选择器的复杂度</span>
+        <img src="/img/csscode.png" class="ppt-page-img" />
+        <span>减少需要执行样式计算的元素个数</span>
+    </div>
+
+    <div id="step-5" class="step page" data-x="0" data-y="702" data-z="0" data-rotate-z="180" data-rotate-y="-180" data-rotate-order="zyx">
+        <h5>动画在浏览器的优化</h5>
+        <img src="/img/timeline.png" class="ppt-page-img" />
+        <p>避免大规模、复杂的布局</p>
+        <span>尽可能避免触发布局，减少更改width height等</span>
+        <span>使用flexbox替代老的布局模型</span>
+    </div>
+
+    <div id="step-6" class="step page" data-x="379" data-y="780" data-z="270" data-rotate-z="135" data-rotate-y="-225" data-rotate-order="zyx">
+        <h5>动画在浏览器的优化</h5>
+        <img src="/img/timeline.png" class="ppt-page-img" />
+        <p>减少绘制区域</p>
+        <p>优先使用渲染层合并属性、控制层数量</p>
+        <span>使用transform/opacity实现动画效果</span>
+        <span>应用动画效果的元素提升到其自有的渲染层(<a href="https://caniuse.com/#search=translateZ">translateZ</a> <a href="https://caniuse.com/#search=will-change">will-change</a>)</span>
+        <span>管理渲染层、避免过多数量的层</span>
+
+    </div>
+
+    <div id="step-7" class="step page" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
+        <h5>使用FLIP 技术提升web动画性能 </h5>
+        <p>FLIP 是将一些开销高昂的动画，如针对 width，height，left 或 top 的动画，映射为 transform 动画。通过记录元素的两个快照，一个是元素的初始位置（First - F），另一个是元素的最终位置（Last - L），然后对元素使用一个 transform 变换来反转（Invert - I），让元素看起来还在初始位置，最后移除元素上的 transform 使元素由初始位置运动（Play - P）到最终位置。</p>
+    </div>
+
+    <div id="step-8" class="step page" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx"
+         data-goto-next="step-1">
+        <h5>FLIP 技术评判</h5>
+        <p>这是一个准则，而不是框架或者库</p>
+        <p>在移动端这种性能较低的web环境下，可提供较流畅动画</p>
+        <p>内容可能被扭曲。当进行某些缩放动画时可能导致内容扭曲，毕竟这是一种 Hack 技术</p>
+
+    </div>
+
+
+</div>
+
+
+
+<script type="text/javascript" src="./js/impress.js"></script>
+<script>impress().init();</script>
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+
+</body>
+</html>
