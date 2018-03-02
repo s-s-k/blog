@@ -60,7 +60,7 @@
 
     <div id="paint-step" class="step page" data-x="0" data-y="0" data-z="0">
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">动画在浏览器渲染过程</h5>
-        <img src="/img/timeline.png" class="ppt-page-img" />
+        <img src="img/timeline.png" class="ppt-page-img" />
         <p><strong>JavaScript：</strong>JavaScript实现动画效果，DOM元素操作等</p>
         <p><strong>Style(计算样式)：</strong> 确定每个DOM应该应用什么CSS规则。 </p>
         <p><strong>Layout(布局)：</strong>计算每个DOM元素在最终屏幕上显示的大小和位置。由于web页面的元素布局是相对的，所以其中任意一个元素的位置发生变化，都会联动的引起其他元素发生变化，这个过程叫reflow。
@@ -71,23 +71,23 @@
 
     <div id="paint-step-1" class="step page" data-x="1000" data-y="0" data-z="1" >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">三种常见的渲染流程</h5>
-        <img src="/img/comment.png" class="ppt-page-img" />
+        <img src="img/comment.png" class="ppt-page-img" />
     </div>
     <div id="paint-step-2" class="step page" data-x="2000" data-y="0" data-z="1" >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">三种常见的渲染流程</h5>
-        <img src="/img/timeline.png" class="ppt-page-img" />
+        <img src="img/timeline.png" class="ppt-page-img" />
         <p>修改元素的“layout”属性（例如宽度、高度、左侧或顶部位置等）</p>
         <p>浏览器检查所有元素，任何受影响的部分都需要重新绘制，而且最终绘制的元素需进行合成</p>
     </div>
     <div id="paint-step-3" class="step page" data-x="3000" data-y="0" data-z="1" >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">三种常见的渲染流程</h5>
-        <img src="/img/frame-no-layout.jpg" class="ppt-page-img" />
+        <img src="img/frame-no-layout.jpg" class="ppt-page-img" />
         <p>修改“paint only”属性（例如背景图片、文字颜色或阴影等）</p>
         <p>不会影响页面布局的属性，浏览器跳过布局，直接将执行绘制。</p>
     </div>
     <div id="paint-step-4" class="step page" data-x="4000" data-y="0" data-z="1" >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">三种常见的渲染流程</h5>
-        <img src="/img/frame-no-layout-paint.jpg" class="ppt-page-img" />
+        <img src="img/frame-no-layout-paint.jpg" class="ppt-page-img" />
         <p>更改一个既不要布局也不要绘制的属性，则浏览器将跳到只执行合成。</p>
     </div>
     <!-- <div id="paint-step-5" class="step page" data-x="5000" data-y="0" data-z="1" >
@@ -97,7 +97,7 @@
 
     <div id="step-3" class="step page page-3" data-x="-1000" data-y="1000" data-z="0" >
             <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">性能优化</h5>
-            <img src="/img/timeline.png" class="ppt-page-img" />
+            <img src="img/timeline.png" class="ppt-page-img" />
             <ul>
                 <li> 优化JavaScript的执行效率</li>
                 <li>优化css计算</li>
@@ -112,7 +112,7 @@
         <p>动画实现，避免使用setTimeout或setInterval，尽量使用
                 <a href="https://caniuse.com/#search=requestAnimationFrame">requestAnimationFrame</a>
             </p>
-        <img src="/img/setTimeout.png" class="ppt-page-img" />
+        <img src="img/setTimeout.png" class="ppt-page-img" />
 
     </div>
     <div id="step-3-2" class="step page page-3" data-x="1000" data-y="1000" data-z="0" >
@@ -123,21 +123,21 @@
 
     <div id="step-4" class="step page" data-x="2000" data-y="1000" data-z="0"  >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">css样式优化</h5>
-        <img src="/img/timeline.png" class="ppt-page-img" />
+        <img src="img/timeline.png" class="ppt-page-img" />
         <p>降低样式计算的范围和复杂度</p>
         <span>降低样式选择器的复杂度</span>
-        <img src="/img/csscode.png" class="ppt-page-img" />
+        <img src="img/csscode.png" class="ppt-page-img" />
         <span>减少需要执行样式计算的元素个数</span>
     </div>
     <div id="step-4-1" class="step page" data-x="3000" data-y="1000" data-z="0"  >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">css样式优化</h5>
         <p>解决方案：使用块、元素、修饰符 （BEM） </p>
-        <img src="/img/code1.png" class="ppt-page-img" />
+        <img src="img/code1.png" class="ppt-page-img" />
     </div>
 
     <div id="step-5" class="step page" data-x="-1000" data-y="2000" data-z="0"  >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">避免大规模复杂的布局</h5>
-        <img src="/img/timeline.png" class="ppt-page-img" />
+        <img src="img/timeline.png" class="ppt-page-img" />
         <p>1. 尽可能避免触发布局，减少更改width height等</p>
         <span>哪些 CSS 属性会触发布局、绘制或合成？请查看 <a href="https://csstriggers.com">CSS 触发器</a></span>
         <p>2.使用flexbox替代老的布局模型</p>
@@ -145,7 +145,7 @@
     </div>
     <div id="step-5-1" class="step page" data-x="0" data-y="2000" data-z="0"  >
             <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">避免大规模复杂的布局</h5>
-            <img src="/img/timeline.png" class="ppt-page-img" />
+            <img src="img/timeline.png" class="ppt-page-img" />
             <p>3.避免强制同步布局</p>
             <span>通常情况下，首先 JavaScript 运行，然后计算样式，然后布局。但是，可以使用 JavaScript 强制浏览器提前执行布局。这被称为强制同步布局。 </span>
             <span>offSetHeight 等获取dom位置的属性可出发强制布局</span>
@@ -155,7 +155,7 @@
 
     <div id="step-6" class="step page" data-x="1000" data-y="2000" data-z="0" >
         <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">动画在浏览器的优化</h5>
-        <img src="/img/frame-no-layout.jpg" class="ppt-page-img" />
+        <img src="img/frame-no-layout.jpg" class="ppt-page-img" />
         <p>减少绘制区域</p>
         <span>编排您的动画和变换，使其不过多重叠，或设法避免对页面的某些部分设置动画。</span>
 
@@ -163,7 +163,7 @@
 
     <div id="step-7" class="step page" data-x="2000" data-y="2000" data-z="0"  >
             <h5><img src="//www.baidu.com/img/bd_logo1.png" width="140" height="66" style="display: inline-block">动画在浏览器的优化</h5>
-            <img src="/img/frame-no-layout-paint.jpg" class="ppt-page-img" />
+            <img src="img/frame-no-layout-paint.jpg" class="ppt-page-img" />
             <p>优先使用渲染层合并属性、控制层数量</p>
             <span>使用transform/opacity实现动画效果</span>
             <span>应用动画效果的元素提升到其自有的渲染层(<a href="https://caniuse.com/#search=translateZ">translateZ</a> <a href="https://caniuse.com/#search=will-change">will-change</a>)</span>
