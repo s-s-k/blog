@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta name="referrer" content="always">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link href="css/demo1.css" rel="stylesheet" />
+        <style>
+            .content {
+                height: 80px;
+                background: blue;
+                width: 50px;
+            }
+            .content-end {
+                height: 200px;
+                width: 100px;
+            }
+            .content-end-large {
+                height: 400px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content"></div>
+        </div>
+        <div class="button button1">触发动画</div>
+        <div class="button button2">变大</div>
+        <div style="display: none">
+            <img src="http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg" style="display: none"> </img>
+
+        </div>
+
+        <script type="text/javascript" src="./js/zepto.min.js"></script>
+        <script type="text/javascript" src="./js/flip.js"></script>
+
+
+        <script type="text/javascript">
+            var state1 = 0
+            $('.button1').on('click', function () {
+                var flip = new FLIP({
+                element: $('.content')[0],
+                duration: 2000
+                });
+                flip.first();
+                flip.last('content-end');
+                flip.invert();
+                flip.play();
+            })
+            $('.button2').on('click', function () {
+                var flip = new FLIP({
+                element: $('.content')[0],
+                duration: 2000
+                });
+                flip.first();
+                flip.last('content-end-large');
+                flip.invert();
+                flip.play();
+            })
+        </script>
+
+
+    </body>
+</html>
